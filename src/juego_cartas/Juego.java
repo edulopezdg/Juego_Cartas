@@ -15,8 +15,8 @@ public class Juego {
     
     //Creamos un metodo para llenar el mazo
     public void llenarMazo(){
-        for (String i : numCartas) {
-            for (String j : palos) {
+        for (String i : palos) {
+            for (String j : numCartas) {
                 mazo.add(i+j);
             }
         }
@@ -25,13 +25,13 @@ public class Juego {
     //Creamos un metodo para mostrar el mazo
     public void mostrarBaraja(){
         int cont = 0;
-        for (String i : numCartas) {
+        for (String i : mazo) {
             cont ++;
-            System.out.println(i + "| ");
+            System.out.println(i );
             if (cont == 10) {
                 System.out.println("----------------");
                 cont = 0;
-                System.out.println("----");
+                
             }
         }
     }
