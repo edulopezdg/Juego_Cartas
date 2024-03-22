@@ -39,6 +39,18 @@ public class Main {
         //Barajamos las cartas para mezclar
         b1.barajar();
         
+        Jugador Valen = new Jugador( "Valen");
+        Jugador Fabri = new Jugador( "Fabri");
+        Jugador Edu = new Jugador( "Edu");
+        Jugador Franco = new Jugador( "Franco");
+        
+        b1.dameCarta(Franco);
+        b1.dameCarta(Fabri);
+        b1.dameCarta(Valen);
+        b1.dameCarta(Edu);
+        
+        
+        /*
         //Imprimimos por pantalla las cartas 
         b1.mostrarBaraja();
         
@@ -54,7 +66,7 @@ public class Main {
         System.out.println("-----------------");        
         b1.cartasMonton();//Imprimimos las cartas que se repartieron
         
-       
+       */
        
         
     }

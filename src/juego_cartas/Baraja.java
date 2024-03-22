@@ -10,10 +10,25 @@ public class Baraja {
     private List<Carta> mazo = new ArrayList<>();
     private int entregadas;
     private List<Carta> monton = new ArrayList<>();
+    private Jugador jugador;
 
     //Constructor
     public Baraja() {
         llenarBaraja();
+        
+    }
+    //Probando Juego
+    public void dameCarta( Jugador jugador ) {
+        Carta siguiente = null;
+        if (mazo.size() > 0) {
+            siguiente = mazo.remove(0);
+            monton.add(siguiente);
+            System.out.println(jugador.getNombre() + " saco un: " + siguiente);
+        } else {
+            System.out.println("No hay mas cartas en la baraja...");
+        }
+        
+
     }
 
     //Metodos Getters & Setters
