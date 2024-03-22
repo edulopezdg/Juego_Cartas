@@ -1,5 +1,5 @@
-
 package juego_cartas;
+
 /* 
 Enunciado:
 
@@ -31,14 +31,13 @@ las cartas que no se han sacado. */
 
 public class Main {
 
-    
     public static void main(String[] args) {
-        Juego j1=new Juego();
+
+        Baraja b1=new Baraja();
         
-        j1.llenarMazo();
-        j1.mostrarBaraja();
+        b1.mostrarBaraja();
         
         
     }
-    
+
 }
