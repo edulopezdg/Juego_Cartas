@@ -32,13 +32,28 @@ las cartas que no se han sacado. */
 public class Main {
 
     public static void main(String[] args) {
-
-        Baraja b1=new Baraja();
+        
+        //Creamos una instancia de la clase Baraja
+        Baraja b1=new Baraja();  
+        
+        //Barajamos las cartas para mezclar
         b1.barajar();
+        
+        //Imprimimos por pantalla las cartas 
         b1.mostrarBaraja();
-        b1.siguienteCarta().toString();
+        
+        //Imprime la siguiente carta del mazo
+        b1.siguienteCarta();
+        
         System.out.println("-----------------");
-        b1.darCartas(3);
+        b1.darCartas(3); //Repartimos 3 cartas
+        
+        System.out.println("-----------------");
+        b1.cartasDisponibles();//Imprime la cantidad de cartas disponibles en el mazo
+        
+        System.out.println("-----------------");        
+        b1.cartasMonton();//Imprimimos las cartas que se repartieron
+        
        
        
         
