@@ -18,18 +18,18 @@ public class Baraja {
         
     }
     //Probando Juego
-    public void dameCarta( Jugador jugador ) {
+    /*public void dameCarta( Jugador jugador ) {
         Carta siguiente = null;
         if (mazo.size() > 0) {
             siguiente = mazo.remove(0);
             monton.add(siguiente);
             System.out.println(jugador.getNombre() + " saco un: " + siguiente);
+            jugador.setNumero(siguiente.getNumero());
+            
         } else {
             System.out.println("No hay mas cartas en la baraja...");
         }
-        
-
-    }
+    }*/
 
     //Metodos Getters & Setters
     public List<Carta> getMazo() {

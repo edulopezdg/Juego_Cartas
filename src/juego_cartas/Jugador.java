@@ -12,6 +12,7 @@ package juego_cartas;
 public class Jugador {
     private String nombre;
     private int ganadas;
+    private int numero;
 
     public Jugador(String nombre) {
         this.nombre = nombre;
@@ -19,6 +20,22 @@ public class Jugador {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public void setGanadas(int ganadas) {
+        this.ganadas = ganadas;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getGanadas() {
+        return ganadas;
+    }
+
+    public int getNumero() {
+        return numero;
     }
     
     
