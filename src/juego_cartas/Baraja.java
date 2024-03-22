@@ -1,6 +1,7 @@
 package juego_cartas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Baraja {
@@ -9,12 +10,29 @@ public class Baraja {
     private int entregadas;
     private List<Carta> monton = new ArrayList<>();
 
+    
+    // Constructor
+    
     public Baraja( ) {
         llenarBaraja();
     }
-
-    public void barajar() {
+       // getter y setter
+  
+    public List<Carta> getMazo() {
+        return mazo;
     }
+
+    public int getEntregadas() {
+        return entregadas;
+    }
+
+    public List<Carta> getMonton() {
+        return monton;
+    }
+    
+    
+    
+   
 
    
     private void llenarBaraja() {
@@ -27,6 +45,38 @@ public class Baraja {
                 mazo.add(c1);
             }
         }
+    }
+    
+     // metodo barajar
+    public void barajar() {
+        Collections.shuffle(mazo);
+        
+    }
+    // metodo siguiente carta
+    public Carta siguienteCarta(){
+       Carta siguiente=null;
+        if (mazo.size()>0) {
+            siguiente=mazo.remove(0); 
+            monton.add(siguiente);
+            System.out.println(siguiente);
+        }else{
+            System.out.println("No hay mas cartas en la baraja...");
+        }
+        return siguiente;
+        
+    }
+    // dar cartas
+    public List<Carta> darCartas(int cantidad){
+        List<Carta> cartasADar = new ArrayList<>();
+        if (mazo.size() >= cantidad) {
+
+            for (int i = 0; i < cantidad; i++) {
+                cartasADar.add(siguienteCarta());
+            }
+        }else{
+            System.out.println("no se puede dar "+cantidad+" cartas...");
+        }
+        return cartasADar;
     }
 
     //Creamos un metodo para mostrar el mazo
@@ -43,19 +93,9 @@ public class Baraja {
         }
     }
 
-    public List<Carta> getMazo() {
-        return mazo;
-    }
+ 
 
-    public int getEntregadas() {
-        return entregadas;
-    }
-
-    public List<Carta> getMonton() {
-        return monton;
-    }
-    
-  
+   
   
   
 }

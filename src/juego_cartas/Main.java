@@ -34,9 +34,13 @@ public class Main {
     public static void main(String[] args) {
 
         Baraja b1=new Baraja();
-        
+        b1.barajar();
         b1.mostrarBaraja();
-        
+        b1.siguienteCarta().toString();
+        System.out.println("-----------------");
+        b1.darCartas(3);
+       
+       
         
     }
 
