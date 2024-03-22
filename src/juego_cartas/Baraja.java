@@ -93,7 +93,11 @@ public class Baraja {
         }
     }
 
+  //Cartas disponibles del mazo
+ public void cartasDisponibles(){
+     System.out.println("La cantidad de cartas disponibles es de: " + mazo.size());
  
+ }
 
    
   
